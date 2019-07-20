@@ -18,9 +18,9 @@ def SGradAscent(x_data, gt_y, lr):
     m, n = x_data.shape
     w = np.ones(n)
     for i in range(m):
-        h = sigmoid(x_data[i] , w)#数值计算
+        h = sigmoid(x_data[i] , w)
         error = gt_y[i] - h
-        w = w + lr * error * x_data[i] #array 和list矩阵乘法不一样
+        w = w + lr * error * x_data[i] 
     return w
 
 
